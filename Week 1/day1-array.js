@@ -6,11 +6,6 @@ console.log(agesDoubled)
 //Filter 
 const evenAges =ages.filter(a => a % 2 === 0)
 console.log(evenAges)
-//reduce 
-//const sumAges = ages.reduce((sum, a) => sum + a, 0)
-//find 
-//some 
-//every
 
 const number =[10,18, 26, 17, 19,33, 45, 60]
 const adult = number.filter(n => n >= 18)
