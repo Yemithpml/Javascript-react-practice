@@ -152,13 +152,39 @@ const tasks =[
     {id : 4, title : "Javascript pactice", completed : true}
 ]
 
-const addTasks = (title) =>{
+//adding new tasks
+
+const addTask = (title) =>{
     const newTask = {
-        id : tasks.length,
-        title : title,
+        id: tasks.length + 1,
+        title: title,
         completed : false
-    };
-    tasks.push(addTasks)
+    }
+    tasks.push(newTask)
 }
-addTasks("practice more code")
+
+addTask("practice arrow functions")
 console.log(tasks)
+
+//mark tasks as completed
+const markTask = (id) =>{
+    return tasks.map(task => task.id === id ? {
+        ...task, completed : true 
+    } : task)
+}
+
+const updateTaskStatus = markTask(2)
+console.log(tasks)
+
+//see only completed or pending tasks
+const completedTask = tasks.filter(task => task.completed)
+const pendingTask = tasks.filter(task => !task.completed)
+
+console.log(completedTask)
+console.log(pendingTask)
+
+//calculate completed tasks
+
+const totalCompletedTask = tasks.reduce((count, task) => (task.completed ? count + 1 : count), 0)
+
+console.log(totalCompletedTask)
