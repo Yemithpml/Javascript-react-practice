@@ -98,6 +98,7 @@ function filter(arr, callback){
 }
 console.log(filter([1,10,16,19,22], i => i % 2 === 0))
 
+//closure, scope 
 //createLogger(prefix)
 function createLogger(prefix){
     return function(message){
@@ -110,3 +111,54 @@ const error = createLogger("ERROR")
 
 info("server started")
 error("Unable to connect database")
+
+function greetUser(){
+    let name = "yemi"
+
+    function output(){
+        console.log(`Hello ${name} how are you doing`)
+    }
+    return output
+}
+
+const great = greetUser()
+great()
+great()
+great()
+
+function createScoreTracker(){
+    let score = 0
+    return{
+        addScore(points) {
+            score += points
+        console.log(`You added ${points} point. Total point ${score} `)
+        },
+        getTotal(){
+            console.log(`totalScore : ${score}` )
+        }
+    }
+}
+
+const tracker = createScoreTracker();
+tracker.addScore(20)
+tracker.addScore(15)
+tracker.getTotal()
+
+//mini task manager project 
+const tasks =[
+    {id : 1, title : "Read your bible", completed : true},
+    {id : 2, title : "Workout", completed : false},
+    {id : 3, title : "Javascript tutorials", completed : true},
+    {id : 4, title : "Javascript pactice", completed : true}
+]
+
+const addTasks = (title) =>{
+    const newTask = {
+        id : tasks.length,
+        title : title,
+        completed : false
+    };
+    tasks.push(addTasks)
+}
+addTasks("practice more code")
+console.log(tasks)
