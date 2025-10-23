@@ -1,0 +1,21 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "description": "Going over JavaScript and some basic functionalities used in React, also documenting my progress for the next 28 days",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yemithpml/Javascript-react-practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yemithpml/Javascript-react-practice/issues"
+  },
+  "homepage": "https://github.com/Yemithpml/Javascript-react-practice#readme"
+}
